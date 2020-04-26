@@ -1,0 +1,94 @@
+server:
+  port: 8080
+  use-forward-headers: true
+  tomcat:
+     internal-proxies: .*
+  servlet:
+    contextPath: /
+    sesion:
+      timeout: 10
+  compression:
+    enabled: true
+    mime-types: text/html,text/css,application/javascript,application/json   
+  undertow:
+    accesslog:
+      dir: ${web.app.config}/logs      
+      enabled: true
+      rotate: true
+
+  component:
+    servlet:
+      mapping:
+        contextPath: /web.app/*
+
+#logging:
+#  config: ${web.app.config}/config/log4j2-spring.xml
+
+mysql:
+  service:
+    # The host of the MySQL database server, can be customized using
+    # the 'MYSQL_SERVICE_HOST' env variable
+    host:     innova-db-server
+    # The port of the MySQL database server, can be customized using
+    # the 'MYSQL_SERVICE_PORT' env variable
+    port:     3306
+    # The database to use, can be customized using the 'MYSQL_SERVICE_DATABASE'
+    # env variable
+    database: innova_cc
+    client_database: innova_vo_client
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  jersey:
+    application_path: /api  
+  datasource:
+    url:      jdbc:mariadb://${mysql.service.host}:${mysql.service.port}/${mysql.service.database}
+    jdbcUrl:      jdbc:mariadb://${mysql.service.host}:${mysql.service.port}/${mysql.service.database}
+    username: innova
+    password: innova123
+    maxActive: 50
+    maxIdle: 5
+    maxWait: 1000
+    validationQuery: "select 1"
+    testOnBorrow: true
+    testOnConnect: true
+    testWhileIdle: true
+  jpa:
+    hibernate:
+      # To be updated in real production usage!
+      ddl-auto: update
+      #database-platform: org.hibernate.dialect.SQLServer2012Dialect
+      database-platform: org.hibernate.dialect.MySQLInnoDBDialect
+    properties:
+      hibernate.show_sql: true
+      hibernate.cache.use_second_level_cache: true
+      hibernate.cache.use_query_cache: true
+      hibernate.cache.region.factory_class: org.hibernate.cache.ehcache.EhCacheRegionFactory
+      hibernate.enable_lazy_load_no_trans: true
+  cache:
+    type: hazelcast
+    ehcache:
+      config: classpath:ehcache.xml  
+
+subject:
+  identity:
+    mask: AAAA/A-AAAA-AAAAAAA/A             
+#trace: true
+
+management:
+  health:
+    enabled: true
+    sensitive: false
+    diskspace:
+      enabled: true
+    db:
+      enabled: true
+
+  endpoints:
+    enabled-by-default: true
+    web:
+      exposure:
+         include: '*'    
+      server:
+         auto-time-requests: true 

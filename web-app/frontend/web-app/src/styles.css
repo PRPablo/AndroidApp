@@ -1,0 +1,359 @@
+/* You can add global styles to this file, and also import external style files */
+@import 'indigo-pink.css';
+@import "bootstrap.css";
+
+:root{
+    --primary: #77c84c;
+}
+
+@media (min-width: 768px){
+    .row.flex{
+        display: flex;
+    }
+    .row.flex .mat-card{
+        height: 100%;
+    }
+}
+
+.col-centered{
+  float: none;
+  margin: 0 auto; 
+}
+
+.mat-progress-bar{
+  height: 3px !important;
+}
+
+.component-container{
+    margin-top: 32px;
+}
+
+.mat-card{
+    margin-bottom: 32px;
+}
+
+.mat-form-field{
+    width: 100%;
+}
+
+.mat-toolbar{
+    height: 52px !important;
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+}
+
+.mat-toolbar a > img.logo{
+    width: 120px;
+    margin-top: -8px;
+    max-height: 40px;
+}
+
+.action-bar{
+    background-color: #4a4a4a;
+    color: #fff;
+    padding: 0;
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.5);
+  }
+
+  .mat-tab-body-content{
+      padding: 16px 8px 32px !important;
+  }
+  
+  @media (max-width: 768px){
+    .mat-tab-body-content{
+      padding: 16px 8px 58px !important;
+    }
+    .action-bar{
+      padding: 12px 18px 12px 16px;
+    }
+  }
+  
+  .action-bar h3{
+    color: #fff;
+    font-weight: 300;
+    margin-left: 28px;
+  }
+  @media (max-width: 768px){
+      .action-bar h3{
+        margin-left: 16px;
+    }
+  }
+
+  .action-bar *{
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+h1{
+    font-size: 20px;
+    font-weight: 300;
+    color: #4a4a4a;
+    margin-bottom: 12px;
+}
+h2 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+h3 {
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-family: Roboto;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: left;
+    color: #4a4a4a;
+    font-size: 16px;
+  }
+  h4 {
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-family: Roboto;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: left;
+    color: #4a4a4a;
+    font-size: 14px;
+  }
+  label{
+    font-family: Roboto;
+    font-size: 14px;
+    text-align: left;
+    color: #4a4a4a;
+    font-weight: normal;
+  }
+  .mat-card label.info{
+    padding: 8px 0;
+  }
+
+
+  .online-payment-option-brand{
+    width: 100%;
+  }
+
+  .online-payment-option-brand.bordered{
+    border: thin solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+
+  .payment-option-wrapper{
+    margin-bottom: 32px;
+    text-align: -webkit-center;
+    margin-top: 12px;
+  }
+
+  .external-options-wrapper img{
+    width: 24px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .payment-option-container {
+    margin-top: 16px;
+  }
+  .payment-option-container > a{
+    border: 1px solid #d7d7d7;
+    border-radius: 4px;
+  }
+  .payment-option-container > a:hover{
+    border: 1px solid #5f366e;
+  }
+  .payment-option-container > a.active{
+    border: 1px solid #5f366e;
+    border-radius: 4px;
+  }
+
+  .external-options-wrapper .omw{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 8px;
+  }
+
+  .external-options-wrapper .omw p,
+  .external-options-wrapper .omw label{
+    margin: 0;
+  }
+
+  .external-options-wrapper .omw label{
+    font-size: 12px;
+  }
+
+  .external-options-container{
+    margin-bottom: 16px;
+    line-height: 1.1em;
+  }
+
+  .mat-card .btn-group{
+    z-index: 99;
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+  }
+
+  .primary-button{
+    color: #ffffff;
+    background-color: var(--primary);
+  }
+
+  .align-right{
+    text-align: right;
+  }
+
+  .tab-mat-card{
+      padding: 0 !important;
+  }
+
+  .payment-info-card img{
+    max-width: 100px;
+    max-height: 70px !important;
+  }
+  
+  .onsite-payment img{
+    width: 100%;
+  }
+  @media (max-width: 768px){
+    .payment-info-card img{
+      width: 140px !important;
+    }
+    .onsite-payment img{
+      width: 140px !important;
+      margin-bottom: 16px;
+    }
+    .payment-info-card h2{
+      margin-bottom: 16px;
+    }
+    .payment-info-card h2,
+    .payment-info-card .image-wrapper,
+    .onsite-payment .image-wrapper{
+      text-align: center;
+    }
+    .onsite-payment .info-wrapper{
+      margin-bottom: 16px;
+    }
+  }
+
+  .payment-form .btn-tarjetas {
+    margin-top: 16px;
+  }
+  .btn-tarjetas > a.btn{
+    border: 1px solid #d7d7d7;
+    border-radius: 4px;
+  }
+  .btn-tarjetas > a.btn:hover{
+    border: 1px solid #5f366e;
+  }
+  .btn-tarjetas > a.btn.active{
+    border: 1px solid #5f366e;
+    border-radius: 4px;
+  }
+
+  .onsite-payment .info-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .onsite-payment .info-wrapper h3, 
+  .onsite-payment .info-wrapper p{
+    margin: 0;
+  }
+
+  .google-map-container{
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+  }
+  agm-map {
+    height: 400px;
+  }
+
+  .debt-search-result label, 
+  .debt-search-result p{
+    margin: 0 ;
+  }
+
+  .debt-search-result label{
+    font-size: 11px;
+    font-weight: bold;
+  }
+
+  .debt-search-result p.debt{
+    font-size: 28px;
+  }
+
+  .debt-search-result .inner{
+    margin-bottom: 24px;
+  }
+
+  div.error{
+    background-color: #D32F2F;
+    color: #ffffff;
+    border-radius: 4px;
+    display: flex;
+    padding: 8px;
+  }
+  div.error label{
+    color: #ffffff;
+    margin-bottom: 0;
+  }
+  div.error .mat-icon{
+    font-size: 20px;
+  }
+
+  .online-payment-method-wrapper{
+    text-align: -webkit-center;
+    margin-top: 12px;
+  }
+  .online-payment-method-container{
+    margin-bottom: 12px;
+  }
+
+  @media (min-width: 768px){
+    .online-payment-method-brand{
+      width: 160px;
+    }
+  }
+  @media (min-width: 1200px){
+    .online-payment-method-brand{
+      width: 120px;
+    }
+  }
+  @media (max-width: 767px){
+    .online-payment-method-brand{
+      width: 110px;
+    }
+  }
+
+  @media (max-width: 580px) {
+    .container {
+      padding-right: 8px;
+      padding-left: 8px;
+    }
+  }
+  @media (min-width: 992px) {
+    .container {
+      width: 768px;
+    }
+  }
+  @media (min-width: 1280px) {
+    .container {
+      width: 950px;
+    }
+  }
+
+  .success-message-card {
+    margin-top: 56px;
+  }
+
+  .flex-center-start {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
