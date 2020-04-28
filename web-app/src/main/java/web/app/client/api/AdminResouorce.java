@@ -19,7 +19,7 @@ public interface AdminResouorce {
 
 	@GET
 	@Path("/all")
-	@ApiOperation(nickname="findAll", value="Get all enterprise available", response=AdminDto.class, responseContainer="List")
+	@ApiOperation(nickname="findAll", value="Get all admin", response=AdminDto.class, responseContainer="List")
 	List<AdminDto> findAll();
 	
 }

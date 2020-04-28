@@ -22,9 +22,9 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import web.app.core.service.SpringServiceProvider;
 
 @SpringBootApplication(scanBasePackages={"web.app"})
-@EntityScan(value={"web.app.model"})
 @ServletComponentScan(basePackages={"web.app"})
-@EnableJpaRepositories(value={"web.app.dao"})
+//@EntityScan(value={"web.app.model"})
+//@EnableJpaRepositories(value={"web.app.dao"})
 @EnableCaching
 public class WebApplication extends SpringBootServletInitializer {
 
