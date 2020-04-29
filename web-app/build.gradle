@@ -92,6 +92,7 @@ dependencies {
   implementation 'org.springframework.boot:spring-boot-starter-web'
   developmentOnly 'org.springframework.boot:spring-boot-devtools'
   runtimeOnly 'mysql:mysql-connector-java'
+  implementation 'org.springframework.boot:spring-boot-starter-security'
 
   compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.6.1'
   compile group: 'joda-time', name: 'joda-time', version: '2.9.9'
@@ -110,8 +111,8 @@ dependencies {
   compile group: 'org.codehaus.jettison', name: 'jettison', version: '1.4.0'
   compile group: 'org.apache.cxf', name: 'cxf-rt-rs-client', version: '3.2.6'
   compile "com.google.zxing:core:3.3.3"
-  compile 'com.google.zxing:javase:3.3.3'  
-  
+  compile 'com.google.zxing:javase:3.3.3'
+    
   testCompile group: 'junit', name: 'junit', version: '4.12'
   testCompile("org.springframework.boot:spring-boot-starter-test:${springBootVersion}")
   
