@@ -1,3 +1,5 @@
-# AndroidApp
+# AndroidApp with Flutter
 
-# init
+# WebApp - Backend: Java 8 with Spring Boot 2
+#        - Frontend: Angular 6 with Material
+
